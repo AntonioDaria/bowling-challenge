@@ -20,4 +20,10 @@ describe("Game", function(){
      expect(game.score).toEqual([5,4])
    })
 
+   it('calculaes the score after 2 rolls', function() {
+     game.roll(5)
+     game.roll(4)
+     expect(game.totalScore()).toEqual(9)
+   })
+
 });
