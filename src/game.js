@@ -29,3 +29,9 @@ Game.prototype.isSpare = function () {
     return true;
   }
 };
+
+Game.prototype.isGutter = function () {
+  if (this.totalScore() === 0 ){
+    return true;
+  }
+};

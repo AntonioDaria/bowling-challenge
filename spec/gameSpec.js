@@ -37,6 +37,14 @@ describe("Game", function(){
      expect(game.isSpare()).toBe(true)
    })
 
+   it('calculates a gutter game', function() {
+     var step;
+     for (step = 0; step < 20; step++) {
+       game.roll(0)
+     }
+     expect(game.isGutter()).toBe(true)
+   })
+
 
 
 });
