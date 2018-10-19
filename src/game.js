@@ -17,3 +17,15 @@ Game.prototype.totalScore = function () {
   })
   return sum
 };
+
+Game.prototype.isStrike = function () {
+  if (this.score[0] === 10){
+    return true;
+  }
+};
+
+Game.prototype.isSpare = function () {
+  if (this.score[0] === 2 && this.score[1] === 8){
+    return true;
+  }
+};

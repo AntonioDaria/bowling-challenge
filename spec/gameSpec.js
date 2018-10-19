@@ -20,10 +20,23 @@ describe("Game", function(){
      expect(game.score).toEqual([5,4])
    })
 
-   it('calculaes the score after 2 rolls', function() {
+   it('calculates the score after 2 rolls', function() {
      game.roll(5)
      game.roll(4)
      expect(game.totalScore()).toEqual(9)
    })
+
+   it('calculates a strike', function() {
+     game.roll(10)
+     expect(game.isStrike()).toBe(true);
+   })
+
+   it('calculates a spare', function() {
+     game.roll(2)
+     game.roll(8)
+     expect(game.isSpare()).toBe(true)
+   })
+
+
 
 });
